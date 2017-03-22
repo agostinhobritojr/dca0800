@@ -21,7 +21,8 @@ int main(void)
   // 5 3 4
   // testa se a*a eh igual a b*b + c*c
   tmp = a*a - (b*b+c*c);
-  if(tmp == 0){
+  if(a*a == (b*b+c*c)){
+//  if(tmp == 0){
     printf("o triangulo eh retangulo\n");
   }
   else{
