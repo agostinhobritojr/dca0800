@@ -14,6 +14,22 @@ float fmedia(float x[], int n){
   return (media);
 }
 
+void reverse(int x[], int n){
+  int meio;
+  int i;
+  int tmp;
+  meio = n/2;
+  for(i=0; i<meio; i++){
+    tmp = x[i];
+    x[i] = x[(n-1)-i];
+    x[(n-1)-i] = tmp;
+  }
+}
+
+void muda2(int x[][3], int m, int n){
+
+}
+
 int main(void){
   // criar um array de 10 inteiros
   // array, arranjo, vetor
@@ -22,10 +38,35 @@ int main(void){
 
   float z[4][4];
   float w[4][4]; // w = z^T;
+
+  float n[3][3] = {1,2,4,0,0,2,1,9,-5};
+
   float media, desvio;
   float tmp;
   int nalunos;
   int i, j;
+  int alo[9], ala[9];
+
+  alo[0] = 4;
+  for(i=0; i<9; i++){
+    alo[i] = i+1;
+  }
+
+ // ala = alo; // fail!
+
+  for(i=0; i<9; i++){
+    printf("%d, ", alo[i]);
+  }
+  printf("\n");
+  reverse(alo, 9);
+  for(i=0; i<9; i++){
+    printf("%d, ", alo[i]);
+  }
+
+
+
+
+
 
   printf("media = %f\n\n", fmedia(y,6));
 
@@ -64,7 +105,7 @@ int main(void){
 
 
 
-  int n;
+  //int n;
   /* nao utilizar esse tipo de construcao
   printf("digite n: ");
   scanf("%d",&n);
