@@ -30,7 +30,10 @@ int main(void){
 
   for(i=0; i<nlk; i++){
     for(j=0; j<nck; j++){
-      k[i][j] = rand()%100;
+      //
+      // k[i][j] = rand()%100;
+      printf("digite o elemento (%d,%d):", i,j);
+      scanf("%d", &k[i][j]);
     }
   }
   printf("matrizk\n");
