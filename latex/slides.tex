@@ -1,0 +1,77 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{listings}
+
+\usetheme{Darmstadt}
+
+\title{Exemplo de uso do beamer}
+\author{Agostinho Brito}
+\institute{
+  Departamento de Engenharia da Computação e Automação\\
+  Universidade Federal do Rio Grande do Norte}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{\tableofcontents}
+
+\section{Introdução}
+\begin{frame}
+  \frametitle{Meu primeiro slide}
+  \begin{enumerate}
+  \item Os slides do beamer funcionam com os mesmos recursos do \LaTeX
+     que se usam nos documentos comuns
+    \begin{itemize}
+    \item José
+    \item Maria
+    \item João
+    \end{itemize}
+  \item Continua aqui
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Overlays}
+  Um overlay é uma sequência de definições que podem surgir conforme a
+  passagem dos slides.
+  \begin{itemize}
+  \item <2-> José
+  \item <3-> Maria
+  \item <1-> João
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Um exemplo de figura}
+  \transboxin
+  \begin{center}
+    \includegraphics[width=0.5\linewidth]{biel.png}
+    
+    alor ma adf 34r dfg fdg gasdf wersdfasf asf asdf asdf qwef asdf
+    qwe fasdff g  y ef sadfasdfwe  safasdf
+  \end{center}
+\end{frame}
+
+\section{Desenvolvimento}
+\begin{frame}
+  \frametitle{Uso de blocos}
+  \begin{block}{Equação de segundo grau}
+    A equação de segundo grau tem a formula
+    \begin{displaymath}
+      f(x) = ax^2+bx+c
+    \end{displaymath}
+  \end{block}
+  \begin{block}{Equação de primeiro grau}
+    A equação de primeiro grau tem a formula
+    \begin{displaymath}
+      f(x) = ax+b
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \lstinputlisting[frame=tb, caption={Ponderação de um número}]{natalidade.c}  
+\end{frame}
+\end{document}
