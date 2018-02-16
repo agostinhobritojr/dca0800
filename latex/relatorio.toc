@@ -1,3 +1,0 @@
-\select@language {brazil}
-\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
-\contentsline {chapter}{\numberline {2}Desenvolvimento}{6}
