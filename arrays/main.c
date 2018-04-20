@@ -16,6 +16,11 @@ int main(){
   for(i=0; i<n; i++){
     x[i] = i+1;
   }
+  // para ler do teclado o valor de um
+  // elemento do array
+
+  scanf("%d", &x[0]);
+
   for(i=0; i<n; i++){
     printf("%d, ", x[i]);
   }
