@@ -1,0 +1,91 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{epsfig}
+\usepackage{multicol}
+%\usepackage{noitemsep}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{fancyheadings}
+\usepackage{amsmath}
+\usepackage{ulem}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{geometry}
+% As margens
+\geometry{left=1.0cm, top=1.0cm, bottom=1.0cm, right=1cm}
+ 
+\renewcommand{\labelenumii}{\alph{enumii})}
+\newcommand{\lacuna}{(\hspace*{5mm}) }
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}\scshape
+  DCA - CT - UFRN
+\rule{\linewidth}{1pt}
+\end{center}
+ 
+\begin{center}\Large
+DCA0800 -- Algoritmos e lógica de programação (1\raisebox{0.5ex}{\small a} avaliação - 2018.1)\\
+\end{center}
+\noindent Aluno:\hrulefill \vspace{2mm} Matrícula: \rule{2.5cm}{0.4pt}
+
+\begin{enumerate}
+
+
+\item (2,0 pontos) Elabore um programa em linguagem C para ler do teclado um número inteiro e decompô-lo em notação posicional, como mostra o seguinte exemplo.
+\begin{verbatim}
+digite o numero: 321
+321 = 3*10^2 + 2*10^1 + 1*10^0 = 300 + 20 + 1
+digite o numero: 1302
+1302 = 1*10^3 + 3*10^2 + 0*10^1 + 2*10^0 = 1000 + 300 + 2
+\end{verbatim}
+
+\item (1,5 pontos) Um programador resolveu criar um pequeno programa
+  para mostrar as partes inteira e fracionária de um número
+  fornecido. Para isso, usou o recurso de casting (conversão de tipo)
+  colocando entre parêntesis à esquerda do número o tipo para o qual
+  ele deseja converter o número. Para isso, desenvolveu as seguintes
+  linhas de código:
+\begin{verbatim}
+#include <stdio.h>
+int main(void){
+  int x;
+  float y;
+  printf("digite o numero  : ");
+  scanf("%f",&y);
+  // (int)y retorna a parte inteira de y
+  printf("parte inteira    : %d\n",(int)y); 
+  printf("parte fracionaria: %f\n",y - (int)y);
+}
+\end{verbatim}
+
+Em uma das execuções, ele obteve a seguinte saída:
+\begin{verbatim}
+digite o numero  : 123.45
+parte inteira    : 123
+parte fracionaria: 0.449997
+\end{verbatim}
+
+Há algum erro no código desenvolvido? Justifique sua resposta
+apresentando o porquê da diferença de valores apresentada na saída.
+
+\item (1,5 pontos) Desenvolva um código em C para ler do teclado N
+  números inteiros e calcular a soma dos que forem ímpar.
+
+\end{enumerate}
+
+Embora a avaliação tenha valor igual a 4,0 pontos, a soma dos valores
+das questões é igual a 5,0 pontos. Caso sua pontuação exceda os 4,0
+pontos, ela será restrita a esses 4,0 pontos.  Submeta sua solução no
+SIGAA. {\bf A cópia é proibida, sob pena de nulidade do exame. A
+  interpretação das questões faz parte do exame.}
+\begin{verbatim}
+=== MODELO DE RELATORIO DE PROVA EM TXT ===
+Aluno:
+== questao 1 ====================
+bla bla bla
+
+== questao 2 ====================
+bla bla bla
+\end{verbatim}
+
+\end{document}
