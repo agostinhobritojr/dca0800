@@ -24,10 +24,55 @@ int x[20][20]=
 
 int main(void){
   int i,j;
+  int maximo, produto;
+
   for(i=0; i<20; i++){
 	for(j=0; j<20; j++){
 	  printf("%2d ", x[i][j]);
 	}
 	printf("\n");
   }
+  maximo = 0;
+  // encontra o maximo na sequencia das linhas
+  for(i=0; i<20; i++){
+	for(j=0; j<16; j++){
+	  produto = x[i][j]*x[i][j+1]*x[i][j+2]*x[i][j+3];
+	  if(produto > maximo){
+		maximo = produto;
+	  }
+	}
+  }
+  printf("produto maximo = %d\n", maximo);
+  // encontra o maximo nas colunas
+  for(i=0; i<20; i++){
+	for(j=0; j<16; j++){
+	  produto = x[j][i]*x[j+1][i]*x[j+2][i]*x[j+3][i];
+	  if(produto > maximo){
+		maximo = produto;
+	  }
+	}
+  }
+  printf("produto maximo = %d\n", maximo);
+
+  // encontra o maximo na diagonal direta
+  for(i=0; i<16; i++){
+	for(j=0; j<16; j++){
+	  produto = x[i][j]*x[i+1][j+1]*x[i+2][j+2]*x[i+3][j+3];
+	  if(produto > maximo){
+		maximo = produto;
+	  }
+	}
+  }
+  printf("produto maximo = %d\n", maximo);
+
+  // encontra o maximo na diagonal inversa
+  for(i=3; i<20; i++){
+	for(j=0; j<17; j++){
+	  produto = x[i][j]*x[i-1][j+1]*x[i-2][j+2]*x[i-3][j+3];
+	  if(produto > maximo){
+		maximo = produto;
+	  }
+	}
+  }
+  printf("produto maximo = %d\n", maximo);
 }
