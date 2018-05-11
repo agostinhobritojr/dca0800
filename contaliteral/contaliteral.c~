@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void){
+  int c;
+  puts ("ditige o texto colocando um ('#') para sair: ");
+  do{
+    c=getchar();
+    putchar (c);
+  } while (c != '#');
+  return 0;
+}
