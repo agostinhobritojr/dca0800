@@ -1,8 +1,0 @@
-#include <stdio.h>
-
-int main(void){
-  int numero;
-  printf("digite o numero: ");
-  scanf("%d", &numero);
-  
-}
