@@ -20,6 +20,14 @@ int mudax(int x){
   x = 5;
 }
 
+int geranumero(void){
+  return 5;
+}
+
+void mostranumero(int x){
+  printf("numero = %d\n", x);
+}
+
 float media(float a, float b){
   float retorno;
   retorno = (a+b)/2;
