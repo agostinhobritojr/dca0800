@@ -1,30 +1,51 @@
 #include <stdio.h>
 
-int main(){
-  float x[4][4];
+float somaMat(
+    float x[40][40],
+int nlinhas,
+int ncolunas){
   int i, j;
-  x[0][0] = 3;
-  x[0][1] = 4;
-  x[0][2] = 1;
-  x[0][3] = 2;
-  x[1][0] = 0;
-  x[1][1] = -3;
-  x[1][2] = 9;
-  x[1][3] = 8;
-  x[2][0] = 0;
-  x[2][1] = 0;
-  x[2][2] = 4;
-  x[2][3] = 5;
-  x[3][0] = 1;
-  x[3][1] = 1;
-  x[3][2] = 2;
-  x[3][3] = 6;
+  float soma=0;
+  for(i=0; i<nlinhas; i++){
+    for(j=0; j<ncolunas; j++){
+      soma = soma+
+          x[i][j];
+    }
+  }
+  return soma;
+}
 
-  for(i=0; i<4; i++){
+int main(){
+  float a[] = {4,5,6};
+  float x[3][4] = {
+    {3,4,1,2},
+    {0,-3,9,8},
+    {0,0,4,5}
+  };
+  float y[4][3];
+  int i, j;
+
+  for(i=0; i<3; i++){
     for(j=0; j<4; j++){
       printf("%4.1f ", x[i][j]);
     }
     printf("\n");
   }
+
+  for(i=0; i<4; i++){
+    for(j=0; j<3; j++){
+      y[i][j] = x[j][i];
+    }
+  }
+  printf("\n");
+  for(i=0; i<4; i++){
+    for(j=0; j<3; j++){
+      printf("%4.1f ", y[i][j]);
+    }
+    printf("\n");
+  }
+
+  printf("A soma de x = %f\n",
+         somaMat(x,3,4));
   return 0;
 }
