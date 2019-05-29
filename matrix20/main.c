@@ -27,7 +27,7 @@ int main()
   int i, j;
 
   int produto, maiorproduto=0;
-
+// HORIZONTAL -- -
   for(i=0; i<20; i++){
     for(j=0; j<17; j++){
       produto =
@@ -42,5 +42,55 @@ int main()
   }
   printf("maiorproduto = %d\n",
          maiorproduto);
+
+  // VERTICAL -- |
+  for(i=0; i<17; i++){
+    for(j=0; j<20; j++){
+      produto =
+          m[i][j]*
+          m[i+1][j]*
+          m[i+2][j]*
+          m[i+3][j];
+      if(produto > maiorproduto){
+        maiorproduto = produto;
+      }
+    }
+  }
+  printf("maiorproduto = %d\n",
+         maiorproduto);
+
+  // DIAGONAL DIRETA  -- /
+  for(i=0; i<17; i++){
+    for(j=0; j<17; j++){
+      produto =
+          m[i][j]*
+          m[i+1][j+1]*
+          m[i+2][j+2]*
+          m[i+3][j+3];
+      if(produto > maiorproduto){
+        maiorproduto = produto;
+      }
+    }
+  }
+  printf("maiorproduto = %d\n",
+         maiorproduto);
+
+  // DIAGONAL INVERSA  -- \
+
+  for(i=0; i<17; i++){
+    for(j=3; j<20; j++){
+      produto =
+          m[i][j]*
+          m[i+1][j-1]*
+          m[i+2][j-2]*
+          m[i+3][j-3];
+      if(produto > maiorproduto){
+        maiorproduto = produto;
+      }
+    }
+  }
+  printf("maiorproduto = %d\n",
+         maiorproduto);
+
   return 0;
 }
