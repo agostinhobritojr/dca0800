@@ -25,7 +25,7 @@ int main(){
 
   int produto=0, produtoMax=0;
   int i, j; // linha e coluna
-
+  // horizontal
   for (i=0; i<20; i++) {
     for (j=0; j<17; j++) {
       produto =
@@ -42,6 +42,61 @@ int main(){
     }
   }
   printf("maximo: %d\n", produtoMax);
+  // vertical
+  for (i=0; i<17; i++) {
+    for (j=0; j<20; j++) {
+      produto =
+          z[i][j]*
+          z[i+1][j]*
+          z[i+2][j]*
+          z[i+3][j];
+      if(produto > produtoMax){
+          // foi achada uma sequencia
+          // com produto maior que
+          // o ja achado
+          produtoMax = produto;
+      }
+    }
+  }
+  printf("maximo: %d\n", produtoMax);
+
+  // diagonal descendente
+  for (i=0; i<17; i++) {
+    for (j=0; j<17; j++) {
+      produto =
+          z[i][j]*
+          z[i+1][j+1]*
+          z[i+2][j+2]*
+          z[i+3][j+3];
+      if(produto > produtoMax){
+          // foi achada uma sequencia
+          // com produto maior que
+          // o ja achado
+          produtoMax = produto;
+      }
+    }
+  }
+  printf("maximo: %d\n", produtoMax);
+
+  // diagonal ascendente
+  for (i=3; i<20; i++) {
+    for (j=0; j<17; j++) {
+      produto =
+          z[i][j]*
+          z[i-1][j+1]*
+          z[i-2][j+2]*
+          z[i-3][j+3];
+      if(produto > produtoMax){
+          // foi achada uma sequencia
+          // com produto maior que
+          // o ja achado
+          produtoMax = produto;
+      }
+    }
+  }
+  printf("maximo: %d\n", produtoMax);
+
+
 
   return 0;
 }
