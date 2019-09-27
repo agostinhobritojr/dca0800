@@ -46,7 +46,6 @@ int main(){
       printf("%d, ", aposta[i]);
     }
     printf("\n");
-
   }
   // FIM DA REPETICAO DA GERACAO DE APOSTAS
   return 0;
