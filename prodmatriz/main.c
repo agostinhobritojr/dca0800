@@ -25,6 +25,7 @@ int main(){
 
   int produto=0, produtoMax=0;
   int i, j; // linha e coluna
+  int num[4];
   // horizontal
   for (i=0; i<20; i++) {
     for (j=0; j<17; j++) {
@@ -37,7 +38,11 @@ int main(){
           // foi achada uma sequencia
           // com produto maior que
           // o ja achado
-          produtoMax = produto;
+        num[0] =z[i][j];
+        num[1] =z[i][j+1];
+        num[2] =z[i][j+2];
+        num[3] =z[i][j+3];
+        produtoMax = produto;
       }
     }
   }
@@ -54,7 +59,11 @@ int main(){
           // foi achada uma sequencia
           // com produto maior que
           // o ja achado
-          produtoMax = produto;
+        num[0] =z[i][j];
+        num[1] =z[i+1][j];
+        num[2] =z[i+2][j];
+        num[3] =z[i+3][j];
+        produtoMax = produto;
       }
     }
   }
@@ -72,7 +81,11 @@ int main(){
           // foi achada uma sequencia
           // com produto maior que
           // o ja achado
-          produtoMax = produto;
+        num[0] =z[i][j];
+        num[1] =z[i+1][j+1];
+        num[2] =z[i+2][j+2];
+        num[3] =z[i+3][j+3];
+        produtoMax = produto;
       }
     }
   }
@@ -90,13 +103,15 @@ int main(){
           // foi achada uma sequencia
           // com produto maior que
           // o ja achado
-          produtoMax = produto;
+        num[0] =z[i][j];
+        num[1] =z[i-1][j+1];
+        num[2] =z[i-2][j+2];
+        num[3] =z[i-3][j+3];
+        produtoMax = produto;
       }
     }
   }
-  printf("maximo: %d\n", produtoMax);
-
-
-
+  printf("%d x %d x %d x %d = %d\n",
+         num[0],num[1], num[2], num[3], produtoMax);
   return 0;
 }
