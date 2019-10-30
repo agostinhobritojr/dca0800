@@ -12,7 +12,7 @@ Este documento exemplifica o uso de markdown no github para a disciplina dca0800
 
 Os caracteres podem ser *italico*, **negrito**,  _italico_, __negrito__, ~riscado~, `codigo`.
 
-```
+```c
 #include <stdio.h>
 
 int main()
