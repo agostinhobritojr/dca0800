@@ -25,3 +25,7 @@ int main()
 
 Markdown também suporta o uso de
 [links](http://www.google.com.br)
+
+# Links uteis
+* [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
