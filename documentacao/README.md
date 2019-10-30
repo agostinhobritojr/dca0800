@@ -35,3 +35,12 @@ Markdown também suporta o uso de
 A figura a seguir mostra um exemplo de uso da interface
 
 ![tela de exemplo](figuras/tela.png)
+
+
+## Tabelas
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
