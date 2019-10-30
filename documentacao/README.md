@@ -26,6 +26,12 @@ int main()
 Markdown também suporta o uso de
 [links](http://www.google.com.br)
 
-# Links uteis
+## Links uteis
 * [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+
+## Figuras
+
+A figura a seguir mostra um exemplo de uso da interface
+
+![tela de exemplo](figuras/tela.png)
