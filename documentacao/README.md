@@ -9,3 +9,5 @@ Este documento exemplifica o uso de markdown no github para a disciplina dca0800
 1. alo
 1. maria
 1. jose
+
+Os caracteres podem ser *negrito*, **muito negrito**,  _italico_, __muito italico__, ~~ riscado ~~, `codigo`. 
