@@ -24,4 +24,4 @@ int main()
 ```
 
 Markdown também suporta o uso de
-[http://www.google.com/](links)
+[links](http://www.google.com.br)
