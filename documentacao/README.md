@@ -22,3 +22,6 @@ int main()
   return 0;
 }
 ```
+
+Markdown também suporta o uso de
+[http://www.google.com/](links)
